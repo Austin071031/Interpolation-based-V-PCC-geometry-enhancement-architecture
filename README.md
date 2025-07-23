@@ -47,13 +47,16 @@ Before you begin, ensure you have the following installed:
    python ply_processing/gen_interpolation.py
    ```
 
-## Training
+## Training -- Interpolation
+You can configure the parameters when you call the command, or you can configure them inside the **src/genpd_train.py** file
 ```bash
 python src/genpd_train.py \
---dataset_8i=NOISY_TRAINING_DATA
---dataset_8i_GT=GROUNDTRUTH_TRAINING_DATA
---dataset_8i_val=NOISY_TESTING_DATA
---dataset_8i_val_GT=GROUNDTRUTH_TESTING_DATA
+--dataset_8i=NOISY_TRAINING_DATA_PATH
+--dataset_8i_GT=GROUNDTRUTH_TRAINING_DATA_PATH
+--dataset_8i_val=NOISY_TESTING_DATA_PATH
+--dataset_8i_val_GT=GROUNDTRUTH_TESTING_DATA_PATH
+--ckptdir=SAVE_TRAINED_MODEL_PATH
+--rec_loc=SAVE_TESTING_DATA_PATH
 
 
 ```
